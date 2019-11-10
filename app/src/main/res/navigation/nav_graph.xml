@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/splashFragment">
+
+    <fragment
+            android:id="@+id/splashFragment"
+            android:name="com.crystalpigeon.makeupapp.view.fragments.SplashFragment"
+            android:label="fragment_splash_screen"
+            tools:layout="@layout/fragment_splash_screen">
+        <action
+                android:id="@+id/action_splashFragment_to_loginFragment"
+                app:destination="@id/loginFragment" />
+        <action android:id="@+id/action_splashFragment_to_productTypeFragment" />
+        <action
+                android:id="@+id/action_splashFragment_to_productTypeFragment2"
+                app:destination="@id/productTypeFragment" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.crystalpigeon.makeupapp.view.fragments.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
+        <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+        <action android:id="@+id/action_loginFragment_to_productTypeFragment2" />
+        <action
+                android:id="@+id/action_loginFragment_to_productTypeFragment"
+                app:destination="@id/productTypeFragment" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.crystalpigeon.makeupapp.view.fragments.RegisterFragment"
+            android:label="fragment_register"
+            tools:layout="@layout/fragment_register"/>
+    <fragment
+            android:id="@+id/productTypeFragment"
+            android:name="com.crystalpigeon.makeupapp.view.fragments.ProductTypeFragment"
+            android:label="fragment_product_type"
+            tools:layout="@layout/fragment_product_type" >
+        <action
+                android:id="@+id/action_productTypeFragment_to_listOfProductsFragment"
+                app:destination="@id/listOfProductsFragment"
+                app:enterAnim="@anim/slide_in_right_enter"
+                app:exitAnim="@anim/slide_out_left_exit"
+                app:popEnterAnim="@anim/slide_in_left_enter"
+                app:popExitAnim="@anim/slide_out_right_exit">
+            <argument
+                    android:name="type"
+                    app:argType="string" />
+        </action>
+        <action
+                android:id="@+id/action_productTypeFragment_to_cartScreenFragment"
+                app:destination="@id/cartScreenFragment"
+                app:enterAnim="@anim/slide_in_right_enter"
+                app:exitAnim="@anim/slide_out_left_exit"
+                app:popEnterAnim="@anim/slide_in_left_enter"
+                app:popExitAnim="@anim/slide_out_right_exit"/>
+    </fragment>
+    <fragment
+            android:id="@+id/listOfProductsFragment"
+            android:name="com.crystalpigeon.makeupapp.view.fragments.ListOfProductsFragment"
+            android:label="fragment_list_of_products"
+            tools:layout="@layout/fragment_list_of_products" >
+        <action
+                android:id="@+id/action_listOfProductsFragment_to_productDetailsFragment"
+                app:destination="@id/productDetailsFragment"
+                app:enterAnim="@anim/slide_in_right_enter"
+                app:exitAnim="@anim/slide_out_left_exit"
+                app:popEnterAnim="@anim/slide_in_left_enter"
+                app:popExitAnim="@anim/slide_out_right_exit" />
+        <action
+                android:id="@+id/action_listOfProductsFragment_to_cartScreenFragment"
+                app:destination="@id/cartScreenFragment"
+                app:enterAnim="@anim/slide_in_right_enter"
+                app:exitAnim="@anim/slide_out_left_exit"
+                app:popEnterAnim="@anim/slide_in_left_enter"
+                app:popExitAnim="@anim/slide_out_right_exit"/>
+    </fragment>
+    <fragment
+            android:id="@+id/productDetailsFragment"
+            android:name="com.crystalpigeon.makeupapp.view.fragments.ProductDetailsFragment"
+            android:label="ProductDetailsFragment"
+            tools:layout="@layout/fragment_product_details_screen">
+        <action
+                android:id="@+id/action_productDetailsFragment_to_cartScreenFragment"
+                app:destination="@id/cartScreenFragment"
+                app:enterAnim="@anim/slide_in_right_enter"
+                app:exitAnim="@anim/slide_out_left_exit"
+                app:popEnterAnim="@anim/slide_in_left_enter"
+                app:popExitAnim="@anim/slide_out_right_exit"/>
+    </fragment>
+    <fragment
+            android:id="@+id/cartScreenFragment"
+            android:name="com.crystalpigeon.makeupapp.view.fragments.CartScreenFragment"
+            android:label="cartScreenFragment"
+            tools:layout="@layout/fragment_cart_screen"/>
+</navigation>

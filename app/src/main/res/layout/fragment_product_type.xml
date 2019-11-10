@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.fragments.ProductTypeFragment">
+
+    <FrameLayout
+            android:id="@+id/flProductsTypes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroundProductType"
+                tools:ignore="ContentDescription" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProductType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                tools:ignore="RtlSymmetry" />
+    </FrameLayout>
+
+    <LinearLayout
+            android:id="@+id/errorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:visibility="gone">
+
+        <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="@string/something_went_wrong_please_try_again"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_margin="20dp"/>
+
+        <Button
+                android:id="@+id/btnTryAgain"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/try_again"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

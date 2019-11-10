@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#872089</color>
+    <color name="colorPrimaryDark">#86208E</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorSplash">#CAC6C6</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+
+    <!--colors for products types-->
+    <color name="colorForProductType">#F3F7D5EF</color>
+    <color name="colorForProductType2">#FCBEC1EE</color>
+    <color name="colorForProductType3">#F8F1ABB8</color>
+    <color name="colorForProductType4">#F3E9BA74</color>
+    <color name="colorForProductType5">#F2E993D5</color>
+    <color name="colorForProductType6">#FFB1EA</color>
+    <color name="colorForProductType7">#F8B2B5</color>
+    <color name="colorForProductType8">#9DE5FE</color>
+    <color name="colorForProductType9">#F1CA83</color>
+    <color name="colorForProductType10">#CBF183</color>
+
+    <color name="backgroundProductType">#FBFAFF</color>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.ListOfProductsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProductTypeDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="20dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="20dp"
+            android:visibility="visible"/>
+
+    <LinearLayout
+            android:id="@+id/errorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:visibility="gone">
+
+        <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="@string/something_went_wrong_please_try_again"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_margin="20dp"/>
+
+        <Button
+                android:id="@+id/tryAgain"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/try_again"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+    </LinearLayout>
+
+</LinearLayout>
