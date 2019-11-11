@@ -23,16 +23,16 @@ class NetworkModule {
     }
 
     @Provides
-    fun provideClient(interceptor: HttpLoggingInterceptor): OkHttpClient {
+    fun provideClient(interceptor: HttpLoggingInterceptor): OkHttpClient{
+        val clientBuilder = OkHttpClient.Builder()
+            .connectTimeout(1, TimeUnit.MINUTES)
+            .writeTimeout(1, TimeUnit.MINUTES)
+            .readTimeout(1, TimeUnit.MINUTES)
+
         return if (BuildConfig.DEBUG) {
-            OkHttpClient.Builder()
-                .connectTimeout(1, TimeUnit.MINUTES)
-                .writeTimeout(1, TimeUnit.MINUTES)
-                .readTimeout(1, TimeUnit.MINUTES)
-                .addInterceptor(interceptor)
-                .build()
+            clientBuilder.addInterceptor(interceptor).build()
         } else {
-            OkHttpClient.Builder().build()
+            clientBuilder.build()
         }
     }
 
